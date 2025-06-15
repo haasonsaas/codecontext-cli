@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0",
+  "mode": "smart",
+  "ignorePatterns": [
+    "node_modules/**",
+    "dist/**",
+    "build/**",
+    "*.log",
+    ".git/**",
+    "coverage/**"
+  ],
+  "analysisFocus": [
+    "architecture",
+    "dependencies",
+    "recent-changes"
+  ],
+  "outputFormat": "markdown",
+  "integrations": {
+    "git": true,
+    "claude": true
+  }
+}

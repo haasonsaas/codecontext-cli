@@ -1,10 +1,13 @@
 #!/usr/bin/env node
 
 import { Command } from 'commander';
-import chalk from 'chalk';
+import { config } from 'dotenv';
 import { initCommand } from './commands/init';
 import { refreshCommand } from './commands/refresh';
 import { contextCommand } from './commands/context';
+
+// Load environment variables
+config();
 
 const program = new Command();
 
@@ -41,3 +44,4 @@ program.parse(process.argv);
 if (!process.argv.slice(2).length) {
   program.outputHelp();
 }
+// Test comment

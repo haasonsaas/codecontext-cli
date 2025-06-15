@@ -1,4 +1,3 @@
-import { Command } from 'commander';
 import chalk from 'chalk';
 import ora from 'ora';
 import fs from 'fs-extra';
@@ -7,7 +6,7 @@ import { analyzeDirectory } from '../services/analyzer';
 import { getChangedFiles } from '../services/git';
 import { CodeContextConfig } from '../types';
 
-export async function refreshCommand(options: any, command: Command) {
+export async function refreshCommand(options: any) {
   const spinner = ora('Refreshing documentation...').start();
   
   try {

@@ -45,8 +45,17 @@ export async function getRecentCommits(projectPath: string, limit: number = 10):
   const git: SimpleGit = simpleGit(projectPath);
   
   try {
-    const log = await git.log(['--oneline', `-${limit}`]);
-    return log.all;
+    const log = await git.log({
+      maxCount: limit,
+      format: {
+        hash: '%H',
+        date: '%ai',
+        message: '%s',
+        author_name: '%an',
+        author_email: '%ae'
+      }
+    });
+    return [...log.all];
   } catch (error) {
     console.error('Error getting git log:', error);
     return [];

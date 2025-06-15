@@ -1,4 +1,3 @@
-import { Command } from 'commander';
 import chalk from 'chalk';
 import ora from 'ora';
 import fs from 'fs-extra';
@@ -6,7 +5,7 @@ import path from 'path';
 import { generateContext } from '../services/contextGenerator';
 import { CodeContextConfig } from '../types';
 
-export async function contextCommand(options: any, command: Command) {
+export async function contextCommand(options: any) {
   const spinner = ora('Generating AI context...').start();
   
   try {

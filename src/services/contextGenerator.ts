@@ -5,7 +5,7 @@ import { CodeContextConfig } from '../types';
 
 export async function generateContext(
   targetPath: string,
-  config: CodeContextConfig,
+  _config: CodeContextConfig,
   type: 'directory' | 'project' | 'standard'
 ): Promise<string> {
   let context = '';

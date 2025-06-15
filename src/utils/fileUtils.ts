@@ -16,7 +16,7 @@ export async function getFileInfo(filePath: string): Promise<FileAnalysis> {
   };
 }
 
-export async function getDirectoryPurpose(dirPath: string): Promise<string> {
+export async function getDirectoryPurpose(dirPath: string, _analyzedFiles?: FileAnalysis[]): Promise<string> {
   const dirName = path.basename(dirPath);
   const files = await fs.readdir(dirPath);
   

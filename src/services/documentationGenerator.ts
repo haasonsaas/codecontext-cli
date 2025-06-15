@@ -3,7 +3,7 @@ import path from 'path';
 
 export async function generateDocumentation(
   analysis: DirectoryAnalysis, 
-  config: CodeContextConfig
+  _config: CodeContextConfig
 ): Promise<string> {
   const dirName = path.basename(analysis.path);
   const timestamp = new Date().toISOString();

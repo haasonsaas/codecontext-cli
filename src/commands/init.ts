@@ -1,4 +1,3 @@
-import { Command } from 'commander';
 import chalk from 'chalk';
 import ora from 'ora';
 import fs from 'fs-extra';
@@ -7,7 +6,7 @@ import { analyzeProject } from '../services/analyzer';
 import { installGitHooks } from '../services/git';
 import { CodeContextConfig } from '../types';
 
-export async function initCommand(options: any, command: Command) {
+export async function initCommand(options: any) {
   const spinner = ora('Initializing CodeContext...').start();
   
   try {
