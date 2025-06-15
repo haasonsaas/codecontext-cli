@@ -120,7 +120,7 @@ export async function analyzeDirectory(dirPath: string, config: CodeContextConfi
   let architecture = generateArchitectureInsights(fileAnalyses, allDependencies);
   let improvements = generateImprovements(fileAnalyses, allDependencies);
   
-  // Use AI for deeper insights if available
+  // Use AI for deeper insights if available and not in quick mode
   if (aiAnalyzer && aiAnalyzer.isAvailable() && config.mode !== 'quick') {
     try {
       const aiInsights = await aiAnalyzer.analyzeDirectory(
